@@ -1,0 +1,342 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Download repository pro\n"
+"POT-Creation-Date: 2016-08-05 01:41+0200\n"
+"PO-Revision-Date: 2016-08-04 12:30+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: includes/class-tgm-plugin-activation.php\n"
+
+#: admin/class-dwn-repo-pro-admin.php:162
+msgid "Downloading Page"
+msgstr ""
+
+#: admin/class-dwn-repo-pro-admin.php:164
+msgid "Widgets in this area will be shown on the downloading page."
+msgstr ""
+
+#: admin/class-dwn-repo-pro-admin.php:176
+msgid "Views"
+msgstr ""
+
+#: admin/class-dwn-repo-pro-admin.php:196
+msgid "New Version for"
+msgstr ""
+
+#: admin/class-dwn-repo-pro-admin.php:197
+msgid "Dear user,"
+msgstr ""
+
+#: admin/class-dwn-repo-pro-admin.php:198
+msgid "have been updated to the release"
+msgstr ""
+
+#: admin/class-dwn-repo-pro-admin.php:199
+msgid "You can download it by following this link :"
+msgstr ""
+
+#: admin/class-dwn-repo-pro-admin.php:201
+msgid "You receive this alerte because your email adress have been added to our updated list."
+msgstr ""
+
+#: admin/class-dwn-repo-pro-admin.php:202
+msgid "You can unsuscribe from this alert by following this link."
+msgstr ""
+
+#: admin/class-dwn-repo-pro-admin.php:205
+msgid "Your Alert Key: "
+msgstr ""
+
+#: admin/class-dwn-repo-pro-admin.php:206
+msgid "Your Alert Email: "
+msgstr ""
+
+#: admin/class-dwn-repo-pro-admin.php:208
+msgid "Kind Regards"
+msgstr ""
+
+#: admin/class-dwn-repo-pro-admin.php:209
+msgid "team"
+msgstr ""
+
+#: admin/class-dwn-repo-pro-admin.php:227
+msgid "Do not update VERSION FIELD if not needed. Updating VERSION FIELD will run the mail alert. All the subscriber for the current software will receive an update alert"
+msgstr ""
+
+#: admin/custom-category.php:23 admin/widget-category.php:27
+msgid "Downloads Categories"
+msgstr ""
+
+#: admin/custom-category.php:24 admin/custom-category.php:25
+msgid "Downloads Category"
+msgstr ""
+
+#: admin/custom-category.php:28 admin/post-type.php:52
+msgid "downloads"
+msgstr ""
+
+#: admin/custom-tag.php:23
+msgid "Downloads Tags"
+msgstr ""
+
+#: admin/custom-tag.php:24 admin/custom-tag.php:25
+msgid "Downloads Tag"
+msgstr ""
+
+#: admin/custom-tag.php:29
+msgid "downloads-filter"
+msgstr ""
+
+#: admin/custom-tag.php:46
+msgid "Downloads Licenses"
+msgstr ""
+
+#: admin/custom-tag.php:47 admin/custom-tag.php:48
+msgid "Downloads License"
+msgstr ""
+
+#: admin/custom-tag.php:52
+msgid "downloads-license"
+msgstr ""
+
+#: admin/metabox.php:95
+msgid "software Informations"
+msgstr ""
+
+#: admin/metabox.php:111
+msgid "Detailled Software Informations"
+msgstr ""
+
+#: admin/post-type.php:23 admin/post-type.php:25 admin/post-type.php:26
+msgid "Downloads"
+msgstr ""
+
+#: admin/post-type.php:24 admin/post-type.php:38
+#: public/class-dwn-repo-template-functions.php:146
+#: public/templates/down_repo-downloading.php:26
+msgid "Download"
+msgstr ""
+
+#: admin/post-type.php:27
+msgid "Downloads Archives"
+msgstr ""
+
+#: admin/post-type.php:28
+msgid "All Downloads"
+msgstr ""
+
+#: admin/post-type.php:29
+msgid "Add New Download"
+msgstr ""
+
+#: admin/post-type.php:32
+msgid "download"
+msgstr ""
+
+#: admin/post-type.php:39
+msgid "Manage your Download Repository"
+msgstr ""
+
+#: admin/widget-category.php:79
+msgid "Title:"
+msgstr ""
+
+#: includes/class-dwn-repo-pro-i18n.php:34
+#: public/class-dwn-repo-template-functions.php:98
+msgid "Version"
+msgstr ""
+
+#: includes/class-dwn-repo-pro-i18n.php:35
+#: public/class-dwn-repo-template-functions.php:101
+#: public/class-dwn-repo-template-functions.php:296
+msgid "Editor"
+msgstr ""
+
+#: includes/class-dwn-repo-pro-i18n.php:36
+#: public/class-dwn-repo-template-functions.php:104
+msgid "Editor Website"
+msgstr ""
+
+#: includes/class-dwn-repo-pro-i18n.php:37
+#: public/class-dwn-repo-template-functions.php:107
+msgid "Download Size"
+msgstr ""
+
+#: includes/class-dwn-repo-pro-i18n.php:38
+msgid "Download Link"
+msgstr ""
+
+#: includes/class-dwn-repo-pro-i18n.php:39
+msgid "Mirror Link 1"
+msgstr ""
+
+#: includes/class-dwn-repo-pro-i18n.php:40
+msgid "Mirror Link 2"
+msgstr ""
+
+#: includes/class-dwn-repo-pro-i18n.php:41
+msgid "Mirror Link 3"
+msgstr ""
+
+#: public/class-dwn-repo-pro-public.php:120
+msgid "Registering in progress, please wait..."
+msgstr ""
+
+#: public/class-dwn-repo-pro-public.php:125
+msgid "Unregistering in progress, please wait..."
+msgstr ""
+
+#: public/class-dwn-repo-pro-public.php:149
+#: public/class-dwn-repo-template-functions.php:145
+#: public/class-dwn-repo-template-functions.php:210
+#: public/class-dwn-repo-template-functions.php:223
+#: public/class-dwn-repo-template-functions.php:281
+#: public/class-dwn-repo-template-functions.php:290
+#: public/class-dwn-repo-template-functions.php:348
+#: public/class-dwn-repo-template-functions.php:384
+#: public/class-dwn-repo-template-functions.php:406
+#: public/class-dwn-repo-template-functions.php:476
+msgid "downloading"
+msgstr ""
+
+#: public/class-dwn-repo-pro-public.php:175
+#: public/class-dwn-repo-pro-public.php:191
+msgid "Your email adress"
+msgstr ""
+
+#: public/class-dwn-repo-pro-public.php:175
+msgid "is already registered for"
+msgstr ""
+
+#: public/class-dwn-repo-pro-public.php:191
+msgid "is sucessfully added to the update alert for"
+msgstr ""
+
+#: public/class-dwn-repo-pro-public.php:196
+msgid "An error occur. Please contact the admin"
+msgstr ""
+
+#: public/class-dwn-repo-pro-public.php:203
+msgid "Error : Invalid email adress"
+msgstr ""
+
+#: public/class-dwn-repo-pro-public.php:231
+msgid "Success : you have been unregistered from the update alert for"
+msgstr ""
+
+#: public/class-dwn-repo-pro-public.php:235
+#: public/class-dwn-repo-pro-public.php:243
+msgid "Error :informations provided are not valids. Wa are unable to proceed"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:111
+msgid "License"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:145
+msgid "Downloading"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:147
+msgid "for"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:181
+msgid "main-dowload"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:321
+msgid "Downloaded"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:321
+msgid "time(s)"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:335
+msgid "Alert when update available"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:349
+msgid "Download Now"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:360
+msgid "You can also try a mirror link :"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:362
+#: public/class-dwn-repo-template-functions.php:365
+#: public/class-dwn-repo-template-functions.php:368
+msgid "Mirror"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:390
+msgid "Your download for"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:390
+msgid "will begin in <span id=\"downloadall_cpt\">5</span> seconds"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:391
+msgid "If it does not start automatically, you can click"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:392
+msgid "this link"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:394
+msgid "If the download link is broken, you should visit"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:395
+msgid "editor website"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:398
+msgid "Back to description"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:497
+msgid "You are currently receiving alert when update is available for"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:498
+msgid "You can unsuscribe from this alert if you want"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:505
+msgid "Unsuscribe Now"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:508
+msgid "Invalid link. We are unable to retrieve the record for your registration. Please check and verify your registration key and email"
+msgstr ""
+
+#: public/class-dwn-repo-template-functions.php:537
+msgid "Manage subscription alert"
+msgstr ""
+
+#: public/templates/down_repo-downloading.php:7
+msgid "Most popular downloads"
+msgstr ""
+
+#: public/templates/down_repo-form-mail.php:2
+msgid "You will receive an email alert ONLY when a new version will be available"
+msgstr ""
+
+#: public/templates/down_repo-form-mail.php:7
+msgid "Register"
+msgstr ""
