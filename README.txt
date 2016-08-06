@@ -81,6 +81,9 @@ Clic the Save button. This will refresh your permalink
 
 == Changelog ==
 
+= 1.0.1 =
+Fix text domain for localization.
+
 = 1.0 =
 
 * Initial Release.
@@ -94,9 +97,6 @@ Clic the Save button. This will refresh your permalink
 5. publish
 
 == Upgrade Notice ==
-
-= 1.0.1 =
-Fix text domain for localization.
 
 = 1.0 =
 Initial release, this is the first version.
