@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Download Repository Pro\n"
-"POT-Creation-Date: 2016-08-05 01:41+0200\n"
-"PO-Revision-Date: 2016-08-05 01:42+0200\n"
+"POT-Creation-Date: 2016-08-06 11:30+0200\n"
+"PO-Revision-Date: 2016-08-06 11:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -169,7 +169,7 @@ msgstr "Version"
 
 #: includes/class-dwn-repo-pro-i18n.php:35
 #: public/class-dwn-repo-template-functions.php:101
-#: public/class-dwn-repo-template-functions.php:296
+#: public/class-dwn-repo-template-functions.php:308
 msgid "Editor"
 msgstr "Éditeur"
 
@@ -211,12 +211,12 @@ msgstr "Désinscription en cours, veuillez patienter…"
 #: public/class-dwn-repo-template-functions.php:145
 #: public/class-dwn-repo-template-functions.php:210
 #: public/class-dwn-repo-template-functions.php:223
-#: public/class-dwn-repo-template-functions.php:281
-#: public/class-dwn-repo-template-functions.php:290
-#: public/class-dwn-repo-template-functions.php:348
-#: public/class-dwn-repo-template-functions.php:384
-#: public/class-dwn-repo-template-functions.php:406
-#: public/class-dwn-repo-template-functions.php:476
+#: public/class-dwn-repo-template-functions.php:293
+#: public/class-dwn-repo-template-functions.php:302
+#: public/class-dwn-repo-template-functions.php:359
+#: public/class-dwn-repo-template-functions.php:395
+#: public/class-dwn-repo-template-functions.php:417
+#: public/class-dwn-repo-template-functions.php:487
 msgid "downloading"
 msgstr "telechargement"
 
@@ -268,75 +268,75 @@ msgstr "pour"
 msgid "main-dowload"
 msgstr "main-download"
 
-#: public/class-dwn-repo-template-functions.php:321
+#: public/class-dwn-repo-template-functions.php:333
 msgid "Downloaded"
 msgstr "Téléchargé"
 
-#: public/class-dwn-repo-template-functions.php:321
+#: public/class-dwn-repo-template-functions.php:333
 msgid "time(s)"
 msgstr "fois"
 
-#: public/class-dwn-repo-template-functions.php:335
+#: public/class-dwn-repo-template-functions.php:346
 msgid "Alert when update available"
 msgstr "Prévenez-moi des mises à jour"
 
-#: public/class-dwn-repo-template-functions.php:349
+#: public/class-dwn-repo-template-functions.php:360
 msgid "Download Now"
 msgstr "Télécharger maintenant"
 
-#: public/class-dwn-repo-template-functions.php:360
+#: public/class-dwn-repo-template-functions.php:371
 msgid "You can also try a mirror link :"
 msgstr "Vous pouvez aussi essayer un lien miroir"
 
-#: public/class-dwn-repo-template-functions.php:362
-#: public/class-dwn-repo-template-functions.php:365
-#: public/class-dwn-repo-template-functions.php:368
+#: public/class-dwn-repo-template-functions.php:373
+#: public/class-dwn-repo-template-functions.php:376
+#: public/class-dwn-repo-template-functions.php:379
 msgid "Mirror"
 msgstr "Miroir"
 
-#: public/class-dwn-repo-template-functions.php:390
+#: public/class-dwn-repo-template-functions.php:401
 msgid "Your download for"
 msgstr "Votre téléchargement de"
 
-#: public/class-dwn-repo-template-functions.php:390
+#: public/class-dwn-repo-template-functions.php:401
 msgid "will begin in <span id=\"downloadall_cpt\">5</span> seconds"
 msgstr "commencera dans <span id=\"downloadall_cpt\">5</span> secondes"
 
-#: public/class-dwn-repo-template-functions.php:391
+#: public/class-dwn-repo-template-functions.php:402
 msgid "If it does not start automatically, you can click"
 msgstr "Si le téléchargement ne se lance pas automatiquement, cliquez sur"
 
-#: public/class-dwn-repo-template-functions.php:392
+#: public/class-dwn-repo-template-functions.php:403
 msgid "this link"
 msgstr "ce lien"
 
-#: public/class-dwn-repo-template-functions.php:394
+#: public/class-dwn-repo-template-functions.php:405
 msgid "If the download link is broken, you should visit"
 msgstr "Si le lien de téléchargement ne fonctionne pas, vous pouvez visiter le"
 
-#: public/class-dwn-repo-template-functions.php:395
+#: public/class-dwn-repo-template-functions.php:406
 msgid "editor website"
 msgstr "site web de l'éditeur"
 
-#: public/class-dwn-repo-template-functions.php:398
+#: public/class-dwn-repo-template-functions.php:409
 msgid "Back to description"
 msgstr "Retour à la fiche"
 
-#: public/class-dwn-repo-template-functions.php:497
+#: public/class-dwn-repo-template-functions.php:508
 msgid "You are currently receiving alert when update is available for"
 msgstr ""
 "Vous recevez actuellement des alertes lorsqu’une nouvelle version est "
 "disponible pour"
 
-#: public/class-dwn-repo-template-functions.php:498
+#: public/class-dwn-repo-template-functions.php:509
 msgid "You can unsuscribe from this alert if you want"
 msgstr "Vous pouvez vous désinscrire de cette alerte si vous le souhaitez"
 
-#: public/class-dwn-repo-template-functions.php:505
+#: public/class-dwn-repo-template-functions.php:516
 msgid "Unsuscribe Now"
 msgstr "Désinscription immédiate"
 
-#: public/class-dwn-repo-template-functions.php:508
+#: public/class-dwn-repo-template-functions.php:519
 msgid ""
 "Invalid link. We are unable to retrieve the record for your registration. "
 "Please check and verify your registration key and email"
@@ -345,7 +345,7 @@ msgstr ""
 "aux alertes. Merci de vérifier vos clés d’accès aux alertes et votre adresse "
 "email."
 
-#: public/class-dwn-repo-template-functions.php:537
+#: public/class-dwn-repo-template-functions.php:548
 msgid "Manage subscription alert"
 msgstr "Gérer mon inscription à l’alerte nouvelle version"
 
