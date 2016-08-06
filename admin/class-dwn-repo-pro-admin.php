@@ -159,9 +159,9 @@ class Dwn_Repo_Pro_Admin {
 
 	public function widget_sidebar(){
 		register_sidebar( array(
-			'name'          => __( 'Downloading Page', 'down_repo' ),
+			'name'          => __( 'Downloading Page', 'download-directory' ),
 			'id'            => 'down_repo_downloading',
-			'description'   => __( 'Widgets in this area will be shown on the downloading page.', 'down_repo' ),
+			'description'   => __( 'Widgets in this area will be shown on the downloading page.', 'download-directory' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<span class="widgettitle">',
@@ -173,7 +173,7 @@ class Dwn_Repo_Pro_Admin {
 	// Add it to a column in WP-Admin
 	function posts_column_views($defaults){
 		if('down_repo'==get_post_type()) {
-			$defaults['post_views'] = __('Views','down_repo');
+			$defaults['post_views'] = __('Views','download-directory');
 		}
 		return $defaults;
 	}
@@ -193,20 +193,20 @@ class Dwn_Repo_Pro_Admin {
 			{
 				$activation_link = add_query_arg( array( 'down_alert' => $m->identity_key, 'down_email' => $m->email ), site_url('/'));
 				$to=$m->email;
-				$subject=__('New Version for','down_repo').' '.$softTitle;
-				$message= __('Dear user,','down_repo')."\n\n";
-				$message.=$softTitle.' '.__('have been updated to the release','down_repo')." $meta_value\n";
-				$message.=__('You can download it by following this link :','down_repo')."\n";
+				$subject=__('New Version for','download-directory').' '.$softTitle;
+				$message= __('Dear user,','download-directory')."\n\n";
+				$message.=$softTitle.' '.__('have been updated to the release','download-directory')." $meta_value\n";
+				$message.=__('You can download it by following this link :','download-directory')."\n";
 				$message.=get_permalink($post_id )."\n\n";
-				$message.=__('You receive this alerte because your email adress have been added to our updated list.','down_repo')."\n";
-				$message.=__('You can unsuscribe from this alert by following this link.','down_repo')."\n";
+				$message.=__('You receive this alerte because your email adress have been added to our updated list.','download-directory')."\n";
+				$message.=__('You can unsuscribe from this alert by following this link.','download-directory')."\n";
 				$message.=$activation_link."\n";
 				$message.="\n\n";
-				$message.=__('Your Alert Key: ','down_repo')." ".$m->identity_key." \n";
-				$message.=__('Your Alert Email: ','down_repo')." ".$m->email." \n";
+				$message.=__('Your Alert Key: ','download-directory')." ".$m->identity_key." \n";
+				$message.=__('Your Alert Email: ','download-directory')." ".$m->email." \n";
 				$message.="\n\n";
-				$message.=__('Kind Regards','down_repo')."\n";
-				$message.=get_bloginfo('name').' '.__('team','down_repo')."\n";
+				$message.=__('Kind Regards','download-directory')."\n";
+				$message.=get_bloginfo('name').' '.__('team','download-directory')."\n";
 				$message.=get_bloginfo('url')."\n";
 				$status = wp_mail($to,$subject,$message);
 			}
@@ -224,7 +224,7 @@ class Dwn_Repo_Pro_Admin {
 		if('down_repo'==get_post_type()) {
 			?>
 			<div class="notice notice-error is-dismissible">
-				<p><?php _e( 'Do not update VERSION FIELD if not needed. Updating VERSION FIELD will run the mail alert. All the subscriber for the current software will receive an update alert', 'down_repo' ); ?></p>
+				<p><?php _e( 'Do not update VERSION FIELD if not needed. Updating VERSION FIELD will run the mail alert. All the subscriber for the current software will receive an update alert', 'download-directory' ); ?></p>
 			</div>
 			<?php
 		}

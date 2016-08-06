@@ -117,12 +117,12 @@ class Dwn_Repo_Pro_Public {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/dwn-repo-pro-public.js', array( 'jquery'), $this->version, false );
 		wp_localize_script( $this->plugin_name, 'ajax_alert_object', array(
 			'ajaxurl' => admin_url( 'admin-ajax.php' ),
-			'loadingmessage' => __('Registering in progress, please wait...','down_repo'),
+			'loadingmessage' => __('Registering in progress, please wait...','download-directory'),
 			'post_id'=> get_the_id()
 			));
 		wp_localize_script( $this->plugin_name, 'ajax_unalert_object', array(
 			'ajaxurl' => admin_url( 'admin-ajax.php' ),
-			'loadingmessage' => __('Unregistering in progress, please wait...','down_repo'),
+			'loadingmessage' => __('Unregistering in progress, please wait...','download-directory'),
 			));
 	}
 
@@ -146,7 +146,7 @@ class Dwn_Repo_Pro_Public {
 	 * @since    1.0.0
 	 */
 	public function add_meta_header(){
-		if('down_repo'==get_post_type() && get_query_var(__('downloading','down_repo'))=='get'){
+		if('down_repo'==get_post_type() && get_query_var(__('downloading','download-directory'))=='get'){
 			$redir_time=25;
 			$redir_time=apply_filters('down_repo_redirect_time', $redir_time);
 			echo'<meta http-equiv="refresh" content="'.$redir_time.';url='.$this->get_thank_you_page().'" />';
@@ -172,7 +172,7 @@ class Dwn_Repo_Pro_Public {
 			$checkit = $wpdb->get_var( "SELECT COUNT(*) FROM $tablename WHERE email='$email_address' AND post_id='$post_id'" );
 			if($checkit>0) {
 				echo json_encode(array(
-					'message'=>__('Your email adress','down_repo').' '.__('is already registered for','down_repo').' '.$post_title
+					'message'=>__('Your email adress','download-directory').' '.__('is already registered for','download-directory').' '.$post_title
 					));
 			}else{
 				$code = sha1( $email_address . time() );
@@ -188,19 +188,19 @@ class Dwn_Repo_Pro_Public {
 					);
 				if($wpdb->insert( $tablename, $data, $format )){
 					echo json_encode(array(
-						'message'=>__('Your email adress','down_repo').' '.__('is sucessfully added to the update alert for','down_repo').' '.$post_title
+						'message'=>__('Your email adress','download-directory').' '.__('is sucessfully added to the update alert for','download-directory').' '.$post_title
 						));
 				}else{
 					//$res=$wpdb->last_error;
 					echo json_encode(array(
-						'message'=>__('An error occur. Please contact the admin','down_repo')
+						'message'=>__('An error occur. Please contact the admin','download-directory')
 						));
 				}
 			}
 
 		}else{
 			echo json_encode(array(
-				'message'=> __('Error : Invalid email adress', 'down_repo')
+				'message'=> __('Error : Invalid email adress', 'download-directory')
 				));
 		}
 		die();
@@ -228,11 +228,11 @@ class Dwn_Repo_Pro_Public {
 					if($wpdb->delete( $tablename, array( 'id' => $checkit ), array( '%d' ) ))
 					{
 						echo json_encode(array(
-							'message'=> __('Success : you have been unregistered from the update alert for', 'down_repo').' '.get_the_title($post_id ),
+							'message'=> __('Success : you have been unregistered from the update alert for', 'download-directory').' '.get_the_title($post_id ),
 							));
 					}else{
 						echo json_encode(array(
-							'message'=> __('Error :informations provided are not valids. Wa are unable to proceed', 'down_repo')
+							'message'=> __('Error :informations provided are not valids. Wa are unable to proceed', 'download-directory')
 							));
 					}
 				}
@@ -240,7 +240,7 @@ class Dwn_Repo_Pro_Public {
 			}
 		}else{
 			echo json_encode(array(
-				'message'=> __('Error :informations provided are not valids. Wa are unable to proceed', 'down_repo')
+				'message'=> __('Error :informations provided are not valids. Wa are unable to proceed', 'download-directory')
 				));
 		}
 		die();

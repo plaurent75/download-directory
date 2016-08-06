@@ -342,19 +342,19 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 					/* translators: 1: plugin name(s). */
 					'Download Repository Pro requires the following plugin: %1$s.',
 					'Download Repository Pro requires the following plugins: %1$s.',
-					'down_repo'
+					'download-directory'
 				),
 				'notice_can_install_recommended'  => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'Download Repository Pro recommends the following plugin: %1$s.',
 					'Download Repository Pro recommends the following plugins: %1$s.',
-					'down_repo'
+					'download-directory'
 				),
 				'notice_ask_to_update'            => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'The following plugin needs to be updated to its latest version to ensure maximum compatibility with Download Repository Pro: %1$s.',
 					'The following plugins need to be updated to their latest version to ensure maximum compatibility with Download Repository Pro: %1$s.',
-					'down_repo'
+					'download-directory'
 				),
 				'notice_ask_to_update_maybe'      => _n_noop(
 					/* translators: 1: plugin name(s). */
@@ -396,7 +396,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				/* translators: 1: plugin name. */
 				'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'tgmpa' ),
 				/* translators: 1: plugin name. */
-				'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for Download Repository Pro. Please update the plugin.', 'down_repo' ),
+				'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for Download Directory Pro. Please update the plugin.', 'download-directory' ),
 				/* translators: 1: dashboard link. */
 				'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'tgmpa' ),
 				'dismiss'                         => __( 'Dismiss this notice', 'tgmpa' ),

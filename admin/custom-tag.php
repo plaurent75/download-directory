@@ -20,13 +20,13 @@
  */
 
 $labels = array(
-	'name'                       => _x( 'Downloads Tags', 'Taxonomy General Name', 'down_repo' ),
-	'singular_name'              => _x( 'Downloads Tag', 'Taxonomy Singular Name', 'down_repo' ),
-	'menu_name'                  => __( 'Downloads Tag', 'down_repo' ),
+	'name'                       => _x( 'Downloads Tags', 'Taxonomy General Name', 'download-directory' ),
+	'singular_name'              => _x( 'Downloads Tag', 'Taxonomy Singular Name', 'download-directory' ),
+	'menu_name'                  => __( 'Downloads Tag', 'download-directory' ),
 
 	);
 $rewrite = array(
-	'slug'                       =>__( 'downloads-filter', 'down_repo' ),
+	'slug'                       =>__( 'downloads-filter', 'download-directory' ),
 	'with_front'                 => false,
 	'hierarchical'               => false,
 	);
@@ -43,13 +43,13 @@ $args = array(
 register_taxonomy( 'down_tag', array( 'down_repo' ), $args );
 
 $labelsLic = array(
-	'name'                       => _x( 'Downloads Licenses', 'Taxonomy General Name', 'down_repo' ),
-	'singular_name'              => _x( 'Downloads License', 'Taxonomy Singular Name', 'down_repo' ),
-	'menu_name'                  => __( 'Downloads License', 'down_repo' ),
+	'name'                       => _x( 'Downloads Licenses', 'Taxonomy General Name', 'download-directory' ),
+	'singular_name'              => _x( 'Downloads License', 'Taxonomy Singular Name', 'download-directory' ),
+	'menu_name'                  => __( 'Downloads License', 'download-directory' ),
 
 	);
 $rewriteLic = array(
-	'slug'                       =>__( 'downloads-license', 'down_repo' ),
+	'slug'                       =>__( 'downloads-license', 'download-directory' ),
 	'with_front'                 => false,
 	'hierarchical'               => false,
 	);

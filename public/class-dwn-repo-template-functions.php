@@ -95,20 +95,20 @@ class Down_Repo_Template_Functions {
 		$size=$this->get_meta_soft('software_informations_size');
 		$meta_info='<div class="dwnrp-meta"><ul class="dwnrp-info">';
 		if ( ! empty( $version_down) ){
-			$meta_info.= '<li class="dwnrp-version">'.__('Version','down_repo').' : <span>'.$version_down.'</span></li>';
+			$meta_info.= '<li class="dwnrp-version">'.__('Version','download-directory').' : <span>'.$version_down.'</span></li>';
 		}
 		if ( ! empty( $editor) ){
-			$meta_info.= '<li class="dwnrp-editor">'.__('Editor','down_repo').' :  <span>'.$editor.'</span></li>';
+			$meta_info.= '<li class="dwnrp-editor">'.__('Editor','download-directory').' :  <span>'.$editor.'</span></li>';
 		}
 		if ( ! empty( $editorurl) ){
-			$meta_info.= '<li class="dwnrp-editorurl">'.__('Editor Website','down_repo').' :  <span><a href="'.$editorurl.'" rel="nofollow" target="_blank">'.$this->get_domain($editorurl).'</a></span></li>';
+			$meta_info.= '<li class="dwnrp-editorurl">'.__('Editor Website','download-directory').' :  <span><a href="'.$editorurl.'" rel="nofollow" target="_blank">'.$this->get_domain($editorurl).'</a></span></li>';
 		}
 		if ( ! empty( $size) ){
-			$meta_info.= '<li class="dwnrp-size">'.__('Download Size','down_repo').' :  <span>'.$size.'</span></li>';
+			$meta_info.= '<li class="dwnrp-size">'.__('Download Size','download-directory').' :  <span>'.$size.'</span></li>';
 		}
 		if ( $licenses && ! is_wp_error( $licenses ) ){
 
-			$meta_info.= '<li class="dwnrp-license">'.__('License','down_repo').' :  <span>'.$this->show_licences($licenses).'</span></li>';
+			$meta_info.= '<li class="dwnrp-license">'.__('License','download-directory').' :  <span>'.$this->show_licences($licenses).'</span></li>';
 		}
 		$meta_info.='</ul></div>';
 		return $meta_info;
@@ -142,9 +142,9 @@ class Down_Repo_Template_Functions {
 		if(in_the_loop() && 'down_repo'==get_post_type() && !is_admin() && is_singular( )){
 			$current=$title;
 			$rootcat=$this->get_root_cat();
-			if(get_query_var(__('downloading','down_repo'))=='get') $title=__('Downloading','down_repo').' ';
-			else $title=__('Download','down_repo').' ';
-			$title.= $current.' '.__('for','down_repo').' '.$rootcat['name'];
+			if(get_query_var(__('downloading','download-directory'))=='get') $title=__('Downloading','download-directory').' ';
+			else $title=__('Download','download-directory').' ';
+			$title.= $current.' '.__('for','download-directory').' '.$rootcat['name'];
 		}
 		return $title;
 	}
@@ -178,7 +178,7 @@ class Down_Repo_Template_Functions {
 			$taxonomy_slug = $terms->slug;
 			$taxonomy_name=$terms->name;
 		}else{
-			$taxonomy_slug =__( 'main-dowload', 'down_repo' );
+			$taxonomy_slug =__( 'main-dowload', 'download-directory' );
 		}
 
 		return array("name" =>$taxonomy_name, "slug" => $taxonomy_slug);
@@ -207,7 +207,7 @@ class Down_Repo_Template_Functions {
 	 * @since    1.0.0
 	 */
 	public function dwn_repo_rewrite_endpoint() {
-		add_rewrite_endpoint(__('downloading','down_repo'), EP_PERMALINK);
+		add_rewrite_endpoint(__('downloading','download-directory'), EP_PERMALINK);
 		flush_rewrite_rules();
 	}
 
@@ -220,7 +220,7 @@ class Down_Repo_Template_Functions {
 	 */
 	function rewrite_filter_request( $vars )
 	{
-		if( isset( $vars[__('downloading','down_repo')] )&& $vars[__('downloading','down_repo')] === '' ) $vars[__('downloading','down_repo')] = 'get';
+		if( isset( $vars[__('downloading','download-directory')] )&& $vars[__('downloading','download-directory')] === '' ) $vars[__('downloading','download-directory')] = 'get';
 		return $vars;
 	}
 
@@ -290,7 +290,7 @@ class Down_Repo_Template_Functions {
 	public function down_excerpt($excerpt,$is_execerpt=0){
 		global $post;
 		if(!isset($is_execerpt)) $is_execerpt=0;
-		if('down_repo'==get_post_type() && get_query_var(__('downloading','down_repo'))!='get' && is_singular( )){
+		if('down_repo'==get_post_type() && get_query_var(__('downloading','download-directory'))!='get' && is_singular( )){
 			$current=$excerpt;
 			$label=
 			$version_down=$this->get_meta_soft('software_informations_version');
@@ -299,13 +299,13 @@ class Down_Repo_Template_Functions {
 			$editSpace='';
 			$title='';
 			$resume='<p class="dwrp-excerpt">'.$post->post_excerpt.'</p>';
-			$dlbutton='<div class="btn-group btn-group-lg">'.$this->download_button(get_permalink($post->ID ).__('downloading','down_repo')).$this->be_alerted().'</div>';
+			$dlbutton='<div class="btn-group btn-group-lg">'.$this->download_button(get_permalink($post->ID ).__('downloading','download-directory')).$this->be_alerted().'</div>';
 
 			if ( ! empty( $version_down) ) {
 				$version_down=' <span>'.$version_down.'</span>';
 			}
 			if ( empty( $editor) && !empty($editorurl) ) {
-				$editor=__('Editor','down_repo');
+				$editor=__('Editor','download-directory');
 			}
 			if(has_post_thumbnail($post->ID )){
 				remove_filter('post_thumbnail_html',  array($this,'no_thumb'), 99, 5);
@@ -330,7 +330,7 @@ class Down_Repo_Template_Functions {
 			}
 			add_filter( 'the_content', 'wpautop' );
 
-			$viewed= '<p class="dwrp-count">'.__('Downloaded','down_repo').' '.$this->getPostViews(get_the_ID()).' '.__('time(s)','down_repo').'</p>';
+			$viewed= '<p class="dwrp-count">'.__('Downloaded','download-directory').' '.$this->getPostViews(get_the_ID()).' '.__('time(s)','download-directory').'</p>';
 			$excerpt='<div class="down_ex_wrap">'.$title.$editSpace.$viewed.'</div>'.$resume.$dlbutton.$current.$this->form_alert();
 		}
 		return $excerpt;
@@ -343,7 +343,7 @@ class Down_Repo_Template_Functions {
 	 */
 
 	public function be_alerted(){
-		$content ='<button  type="button" class="dwrp-alerte btn btn-danger">'.__('Alert when update available', 'down_repo').'</button>';
+		$content ='<button  type="button" class="dwrp-alerte btn btn-danger">'.__('Alert when update available', 'download-directory').'</button>';
 		return $content;
 	}
 	/**
@@ -356,8 +356,8 @@ class Down_Repo_Template_Functions {
 	 */
 	public function download_button($url='',$label='') {
 		global $post;
-		if($url=='') $url=get_permalink($post->ID ).__('downloading','down_repo');
-		if($label=='') $label=__('Download Now','down_repo');
+		if($url=='') $url=get_permalink($post->ID ).__('downloading','download-directory');
+		if($label=='') $label=__('Download Now','download-directory');
 		return '<a class="btn btn-success" href="'.$url.'">'.$label.'</a>';
 	}
 	/**
@@ -368,15 +368,15 @@ class Down_Repo_Template_Functions {
 	 */
 	public function get_mirror(){
 		if($this->get_meta_soft('software_informations_mirror-1') || $this->get_meta_soft('software_informations_mirror-2') || $this->get_meta_soft('software_informations_mirror-3')){
-			$content= '<div class="dwrp-subauto">'.__('You can also try a mirror link :','down_repo').' <ul class="dwrp-mirror">';
+			$content= '<div class="dwrp-subauto">'.__('You can also try a mirror link :','download-directory').' <ul class="dwrp-mirror">';
 			if($this->get_meta_soft('software_informations_mirror-1')) {
-				$content.= '<li class="dwrp-mirror-main"><a href="'.$this->get_meta_soft('software_informations_mirror-1').'" rel="noreferrer nofollow" target="_blank">'.__('Mirror','down_repo').' 1</a></li>';
+				$content.= '<li class="dwrp-mirror-main"><a href="'.$this->get_meta_soft('software_informations_mirror-1').'" rel="noreferrer nofollow" target="_blank">'.__('Mirror','download-directory').' 1</a></li>';
 			}
 			if($this->get_meta_soft('software_informations_mirror-2')) {
-				$content.= '<li class="dwrp-mirror-main"><a href="'.$this->get_meta_soft('software_informations_mirror-2').'" rel="noreferrer nofollow" target="_blank">'.__('Mirror','down_repo').' 2</a></li>';
+				$content.= '<li class="dwrp-mirror-main"><a href="'.$this->get_meta_soft('software_informations_mirror-2').'" rel="noreferrer nofollow" target="_blank">'.__('Mirror','download-directory').' 2</a></li>';
 			}
 			if($this->get_meta_soft('software_informations_mirror-3')) {
-				$content.= '<li class="dwrp-mirror-main"><a href="'.$this->get_meta_soft('software_informations_mirror-3').'" rel="noreferrer nofollow" target="_blank">'.__('Mirror','down_repo').' 3</a></li>';
+				$content.= '<li class="dwrp-mirror-main"><a href="'.$this->get_meta_soft('software_informations_mirror-3').'" rel="noreferrer nofollow" target="_blank">'.__('Mirror','download-directory').' 3</a></li>';
 			}
 			$content.= '</ul></div>';
 			return $content;
@@ -392,21 +392,21 @@ class Down_Repo_Template_Functions {
 	 */
 	public function filter_content($content){
 		global $post;
-		if('down_repo'==get_post_type() && get_query_var(__('downloading','down_repo'))=='get'){
+		if('down_repo'==get_post_type() && get_query_var(__('downloading','download-directory'))=='get'){
 
 			$alertlink=apply_filters('down_repo_alertlink','#alertlink');
 			$dnwLink=$this->get_meta_soft('software_informations_download-link');
 			$editorLink=$this->get_meta_soft('software_informations_editor_website');
 			$content = '<div class="downloadProject"></div>';
-			$content .='<p class="dwrp-auto">'.__('Your download for','down_repo').' '.$post->post_title.' '.__('will begin in <span id="downloadall_cpt">5</span> seconds','down_repo').'</p>';
-			$content .= '<p class="dwrp-subauto">'.__('If it does not start automatically, you can click', 'down_repo');
-			$content .= ' <a class="dwrp-downloading-link" href="'.$dnwLink.'" rel="noreferrer nofollow" target="_blank">'.__('this link','down_repo').'</a></p>';
+			$content .='<p class="dwrp-auto">'.__('Your download for','download-directory').' '.$post->post_title.' '.__('will begin in <span id="downloadall_cpt">5</span> seconds','download-directory').'</p>';
+			$content .= '<p class="dwrp-subauto">'.__('If it does not start automatically, you can click', 'download-directory');
+			$content .= ' <a class="dwrp-downloading-link" href="'.$dnwLink.'" rel="noreferrer nofollow" target="_blank">'.__('this link','download-directory').'</a></p>';
 			$content .= $this->get_mirror();
-			$content .= '<p class="dwrp-subauto">'.__('If the download link is broken, you should visit', 'down_repo');
-			$content .= ' <a class="dwrp-downloading-link" href="'.$editorLink.'" rel="noreferrer nofollow" target="_blank">'.__('editor website','down_repo').'</a></p>';
+			$content .= '<p class="dwrp-subauto">'.__('If the download link is broken, you should visit', 'download-directory');
+			$content .= ' <a class="dwrp-downloading-link" href="'.$editorLink.'" rel="noreferrer nofollow" target="_blank">'.__('editor website','download-directory').'</a></p>';
 			$content .='<div class="btn-group btn-group-lg">';
 			remove_filter( 'the_title',array($this,'add_cat_to_title'), 10 );
-			$content .=$this->download_button(get_permalink($post->ID ),__('Back to description','down_repo'));
+			$content .=$this->download_button(get_permalink($post->ID ),__('Back to description','download-directory'));
 			add_filter( 'the_title',array($this,'add_cat_to_title'), 10 );
 			$content .=$this->be_alerted().'</div>';
 			echo $content;
@@ -414,7 +414,7 @@ class Down_Repo_Template_Functions {
 			include down_repo_get_template( 'down_repo-downloading');
 			return null;
 
-		}elseif('down_repo'==get_post_type() && get_query_var(__('downloading','down_repo'))!='get' && is_singular( 'down_repo')){
+		}elseif('down_repo'==get_post_type() && get_query_var(__('downloading','download-directory'))!='get' && is_singular( 'down_repo')){
 			$content=$this->single_post_info().$content;
 		}
 		return $content;
@@ -484,7 +484,7 @@ class Down_Repo_Template_Functions {
 	 */
 	public function check_referer(){
 		global $post;
-		if('down_repo'==get_post_type() && get_query_var(__('downloading','down_repo'))=='get'){
+		if('down_repo'==get_post_type() && get_query_var(__('downloading','download-directory'))=='get'){
 			if(!wp_get_referer()) {
 				wp_redirect( get_permalink($post->ID ));
 				exit();
@@ -505,18 +505,18 @@ class Down_Repo_Template_Functions {
 		$soft=get_the_title($post_id);
 		$content= '<h3>'.$soft.'</h3>';
 		if(isset($posts['subscriber_id']) && $posts['subscriber_id']!=''){
-			$content.='<p>'.__('You are currently receiving alert when update is available for','down_repo').' '.$soft."\n";
-			$content.=__('You can unsuscribe from this alert if you want','down_repo').' </p>';
+			$content.='<p>'.__('You are currently receiving alert when update is available for','download-directory').' '.$soft."\n";
+			$content.=__('You can unsuscribe from this alert if you want','download-directory').' </p>';
 			$content.='<form action="remove_alert_down" method="post" id="oldAlertForm">';
 			$content.= wp_nonce_field( 'ajax-alert-down-nonce', 'security',true,false );
 			$content.='<input type="hidden" value="'.$posts['subscriber_id'].'" id="subid">';
 			$content.='<input type="hidden" value="'.$post_id.'" id="post_id">';
 			$content.='<input type="hidden" value="'.$key.'" id="key">';
 			$content.='<input type="hidden" value="'.$mail.'" id="mail">';
-			$content.='<button type="submit" class="btn btn-warning">'.__('Unsuscribe Now','down_repo').' </button>';
+			$content.='<button type="submit" class="btn btn-warning">'.__('Unsuscribe Now','download-directory').' </button>';
 			$content.='</form><div id="down-repo-feedback"></div>';
 		}else{
-			$content.=__('Invalid link. We are unable to retrieve the record for your registration. Please check and verify your registration key and email','down_repo');
+			$content.=__('Invalid link. We are unable to retrieve the record for your registration. Please check and verify your registration key and email','download-directory');
 		}
 
 		return $content;
@@ -545,7 +545,7 @@ class Down_Repo_Template_Functions {
 				'email_addr' => $email_address
 				,'authcode' => $key
 				,'subscriber_id' => $kid
-				,'page_title' =>__('Manage subscription alert','down_repo')
+				,'page_title' =>__('Manage subscription alert','download-directory')
 				,'post_id' => $post_id
 				);
 

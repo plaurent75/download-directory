@@ -21,7 +21,7 @@
  * Author URI:        http://www.patricelaurent.net
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       down_repo
+ * Text Domain:       download-directory
  * Domain Path:       /languages
  */
 

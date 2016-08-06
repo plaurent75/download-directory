@@ -92,7 +92,7 @@ class Rational_Meta_Box {
 		foreach ( $this->screens as $screen ) {
 			add_meta_box(
 				'software-informations',
-				__( 'software Informations', 'down_repo' ),
+				__( 'software Informations', 'download-directory' ),
 				array( $this, 'add_meta_box_callback' ),
 				$screen,
 				'side',
@@ -108,7 +108,7 @@ class Rational_Meta_Box {
 	 */
 	public function add_meta_box_callback( $post ) {
 		wp_nonce_field( 'software_informations_data', 'software_informations_nonce' );
-		 _e('Detailled Software Informations','down_repo');
+		 _e('Detailled Software Informations','download-directory');
 		$this->generate_fields( $post );
 	}
 
@@ -119,7 +119,7 @@ class Rational_Meta_Box {
 		$output = '';
 
 		foreach ( $this->fields as $field ) {
-			$label = '<label for="' . $field['id'] . '">' . __($field['label'],'down_repo') . '</label>';
+			$label = '<label for="' . $field['id'] . '">' . __($field['label'],'download-directory') . '</label>';
 			$db_value = get_post_meta( $post->ID, 'software_informations_' . $field['id'], true );
 			switch ( $field['type'] ) {
 				case 'file':

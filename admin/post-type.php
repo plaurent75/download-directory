@@ -20,23 +20,23 @@
  */
 
 	$labels = array(
-		'name'                  => _x( 'Downloads', 'Post Type General Name', 'down_repo' ),
-		'singular_name'         => _x( 'Download', 'Post Type Singular Name', 'down_repo' ),
-		'menu_name'             => __( 'Downloads', 'down_repo' ),
-		'name_admin_bar'        => __( 'Downloads', 'down_repo' ),
-		'archives'              => __( 'Downloads Archives', 'down_repo' ),
-		'all_items'             => __( 'All Downloads', 'down_repo' ),
-		'add_new_item'          => __( 'Add New Download', 'down_repo' ),
+		'name'                  => _x( 'Downloads', 'Post Type General Name', 'download-directory' ),
+		'singular_name'         => _x( 'Download', 'Post Type Singular Name', 'download-directory' ),
+		'menu_name'             => __( 'Downloads', 'download-directory' ),
+		'name_admin_bar'        => __( 'Downloads', 'download-directory' ),
+		'archives'              => __( 'Downloads Archives', 'download-directory' ),
+		'all_items'             => __( 'All Downloads', 'download-directory' ),
+		'add_new_item'          => __( 'Add New Download', 'download-directory' ),
 	);
 	$rewrite = array(
-		'slug'                  => __('download','down_repo').'/%down_cat%',
+		'slug'                  => __('download','download-directory').'/%down_cat%',
 		'with_front'            => false,
 		'pages'                 => true,
 		'feeds'                 => true,
 	);
 	$args = array(
-		'label'                 => __( 'Download', 'down_repo' ),
-		'description'           => __( 'Manage your Download Repository', 'down_repo' ),
+		'label'                 => __( 'Download', 'download-directory' ),
+		'description'           => __( 'Manage your Download Repository', 'download-directory' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', ),
 		'taxonomies'            => array( 'down_cat', 'down_tag','down_license' ),
@@ -49,7 +49,7 @@
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => __('downloads','down_repo'),
+		'has_archive'           => __('downloads','download-directory'),
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'rewrite'               => $rewrite,

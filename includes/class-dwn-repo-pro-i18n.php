@@ -21,7 +21,7 @@ class Dwn_Repo_Pro_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'down_repo',
+			'download-directory',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 			);
@@ -31,14 +31,14 @@ class Dwn_Repo_Pro_i18n {
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/tgmpa/'
 			);
 		//Manual translation to be added in pot catalogu.
-		$trans=__('Version','down_repo');
-		$trans=__('Editor','down_repo');
-		$trans=__('Editor Website','down_repo');
-		$trans=__('Download Size','down_repo');
-		$trans=__('Download Link','down_repo');
-		$trans=__('Mirror Link 1','down_repo');
-		$trans=__('Mirror Link 2','down_repo');
-		$trans=__('Mirror Link 3','down_repo');
+		$trans=__('Version','download-directory');
+		$trans=__('Editor','download-directory');
+		$trans=__('Editor Website','download-directory');
+		$trans=__('Download Size','download-directory');
+		$trans=__('Download Link','download-directory');
+		$trans=__('Mirror Link 1','download-directory');
+		$trans=__('Mirror Link 2','download-directory');
+		$trans=__('Mirror Link 3','download-directory');
 
 	}
 

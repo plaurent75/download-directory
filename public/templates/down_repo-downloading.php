@@ -4,7 +4,7 @@
 		<?php dynamic_sidebar( 'down_repo_downloading' ); ?>
 	</div>
 <?php endif; ?>
-<h2><?php _e('Most popular downloads','down_repo') ?></h2>
+<h2><?php _e('Most popular downloads','download-directory') ?></h2>
 <?php
 remove_filter( 'the_title',array($this,'add_cat_to_title'), 10 );
 remove_filter( 'post_thumbnail_html',array($this,'no_thumb'), 99 );
@@ -23,7 +23,7 @@ $loop = new WP_Query( $args );
 	<?php the_post_thumbnail('thumbnail',array('class'=>'alignleft')); ?>
 	<h3 class="entry-title"><?php the_title(); ?></h3>
 	<?php the_excerpt(); ?>
-	<p><a href="<?php the_permalink() ?>" title="<?php _e('Download','down_repo') ?> <?php the_title_attribute(); ?>"><?php _e('Download','down_repo') ?> <?php the_title(); ?></a></p>
+	<p><a href="<?php the_permalink() ?>" title="<?php _e('Download','download-directory') ?> <?php the_title_attribute(); ?>"><?php _e('Download','download-directory') ?> <?php the_title(); ?></a></p>
 	<hr />
 	<?php
 	endwhile;

@@ -20,12 +20,12 @@
  */
 
 $labels = array(
-	'name'                       => _x( 'Downloads Categories', 'Taxonomy General Name', 'down_repo' ),
-	'singular_name'              => _x( 'Downloads Category', 'Taxonomy Singular Name', 'down_repo' ),
-	'menu_name'                  => __( 'Downloads Category', 'down_repo' ),
+	'name'                       => _x( 'Downloads Categories', 'Taxonomy General Name', 'download-directory' ),
+	'singular_name'              => _x( 'Downloads Category', 'Taxonomy Singular Name', 'download-directory' ),
+	'menu_name'                  => __( 'Downloads Category', 'download-directory' ),
 	);
 $rewrite = array(
-	'slug'                       => __( 'downloads', 'down_repo' ),
+	'slug'                       => __( 'downloads', 'download-directory' ),
 	'with_front'                 => false,
 	'hierarchical'               => true,
 	);

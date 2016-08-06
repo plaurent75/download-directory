@@ -24,7 +24,7 @@ class Down_Repo_Widget_Cat extends WP_Widget {
 
 	function __construct() {
 		// Instantiate the parent object
-		parent::__construct( false, __('Downloads Categories','down_repo') );
+		parent::__construct( false, __('Downloads Categories','download-directory') );
 	}
 
 	function widget( $args, $instance ) {
