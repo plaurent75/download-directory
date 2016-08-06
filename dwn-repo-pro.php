@@ -16,7 +16,7 @@
  * Plugin Name:       Download Directory
  * Plugin URI:        http://www.patricelaurent.net
  * Description:       Provide a download repository manager.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            patrice LAURENT
  * Author URI:        http://www.patricelaurent.net
  * License:           GPL-2.0+
